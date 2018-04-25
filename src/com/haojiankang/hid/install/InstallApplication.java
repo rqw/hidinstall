@@ -11,9 +11,12 @@ public class InstallApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("fxml/Setting.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("fxml/DbInstall.fxml"));
+        Scene dbinstall= new Scene(root, 440, 300);
         primaryStage.setTitle(ConfigUtils.single().get("title","一体机系统3.0版本安装程序"));
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setScene(dbinstall);
+        primaryStage.setMaximized(false);
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 

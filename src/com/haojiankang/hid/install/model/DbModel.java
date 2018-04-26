@@ -4,43 +4,36 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class DbModel {
-    private StringProperty ip=new SimpleStringProperty();
-    private StringProperty port=new SimpleStringProperty();
-    private StringProperty sid=new SimpleStringProperty();
+    private ConnectionModel cModel;
 
-    public String getIp() {
-        return ip.get();
+    public DbModel(ConnectionModel cModel) {
+        this.cModel = cModel;
     }
 
-    public StringProperty ipProperty() {
-        return ip;
+    private UserInfoModel uModel;
+    {
+        uModel=new UserInfoModel();
     }
 
-    public void setIp(String ip) {
-        this.ip.set(ip);
+    public ConnectionModel getcModel() {
+        return cModel;
     }
 
-    public String getPort() {
-        return port.get();
+    public void setcModel(ConnectionModel cModel) {
+        this.cModel = cModel;
     }
 
-    public StringProperty portProperty() {
-        return port;
+    public UserInfoModel getuModel() {
+        return uModel;
     }
 
-    public void setPort(String port) {
-        this.port.set(port);
+    public void setuModel(UserInfoModel uModel) {
+        this.uModel = uModel;
     }
-
-    public String getSid() {
-        return sid.get();
+    public void setUsername(String username){
+        uModel.setUsername(username);
     }
-
-    public StringProperty sidProperty() {
-        return sid;
-    }
-
-    public void setSid(String sid) {
-        this.sid.set(sid);
+    public void setPassword(String password){
+        uModel.setPassword(password);
     }
 }

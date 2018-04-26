@@ -1,5 +1,6 @@
 package com.haojiankang.hid.install;
 
+import com.haojiankang.hid.install.utils.ApplicationContext;
 import com.haojiankang.hid.install.utils.ConfigUtils;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -18,6 +19,11 @@ public class InstallApplication extends Application {
         primaryStage.setMaximized(false);
         primaryStage.setResizable(false);
         primaryStage.show();
+        primaryStage.setOnCloseRequest(e->{
+            System.exit(0);
+        });
+        ApplicationContext.put("stage.primary",primaryStage);
+        ApplicationContext.put("scene.dbinstall",dbinstall);
     }
 
 

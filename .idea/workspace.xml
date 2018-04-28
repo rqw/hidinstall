@@ -4,13 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/com/haojiankang/hid/install/utils/MessageBox.java" line="50" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1369e97a-c7ac-4ee4-b566-406fa2553ed9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/haojiankang/hid/install/utils/MessageBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/haojiankang/hid/install/controller/DbInstallController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/haojiankang/hid/install/controller/DbInstallController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/haojiankang/hid/install/fxml/MessageBox.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/haojiankang/hid/install/utils/ExceptionUtils.java" beforeDir="false" />
-    </list>
+    <list default="true" id="1369e97a-c7ac-4ee4-b566-406fa2553ed9" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,7 +19,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/haojiankang/hid/install/controller/DbInstallController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="271">
-              <caret line="51" column="43" lean-forward="true" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
+              <caret line="51" column="43" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -43,7 +37,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/haojiankang/hid/install/utils/MessageBox.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="589">
-              <caret line="31" column="49" lean-forward="true" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
+              <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1879#1880#0" expanded="true" />
@@ -111,8 +105,8 @@
       <file leaf-file-name="ValidateException.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/haojiankang/hid/install/exception/ValidateException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+            <state relative-caret-position="247">
+              <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -147,6 +141,11 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="任奇炜 &lt;renqiwei1220@163.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -403,13 +402,14 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="SearchEverywhereHistoryKey" value="color&#9;ACTION&#9;ChangeColorScheme&#10;theme&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -511,31 +511,39 @@
       <workItem from="1524724117279" duration="8811000" />
       <workItem from="1524810188478" duration="79000" />
       <workItem from="1524810734675" duration="1271000" />
-      <workItem from="1524812450580" duration="5447000" />
+      <workItem from="1524812450580" duration="6807000" />
     </task>
+    <task id="LOCAL-00001" summary="消息提醒窗口处理。">
+      <created>1524824496517</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1524824496517</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24837000" />
+    <option name="totallyTimeSpent" value="26197000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" />
+      <window_info active="true" anchor="bottom" id="Messages" order="7" sideWeight="0.49946696" visible="true" weight="0.21668473" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50053304" side_tool="true" visible="true" weight="0.21668473" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.17768148" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.17768148" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2835821" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2835821" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -557,6 +565,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="消息提醒窗口处理。" />
+    <option name="LAST_COMMIT_MESSAGE" value="消息提醒窗口处理。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -891,7 +903,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/haojiankang/hid/install/controller/DbInstallController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
-          <caret line="51" column="43" lean-forward="true" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
+          <caret line="51" column="43" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -953,7 +965,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/haojiankang/hid/install/utils/MessageBox.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="589">
-          <caret line="31" column="49" lean-forward="true" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
+          <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1879#1880#0" expanded="true" />
@@ -973,8 +985,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/haojiankang/hid/install/exception/ValidateException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+        <state relative-caret-position="247">
+          <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
         </state>
       </provider>
     </entry>

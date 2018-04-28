@@ -1,7 +1,7 @@
 package com.haojiankang.hid.install;
 
 import com.haojiankang.hid.install.utils.ApplicationContext;
-import com.haojiankang.hid.install.utils.ConfigUtils;
+import com.haojiankang.hid.install.utils.ViewUtils;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,9 +12,9 @@ public class InstallApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("fxml/DbInstall.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("fxml/db.fxml"));
         Scene dbinstall= new Scene(root, 440, 300);
-        primaryStage.setTitle(ConfigUtils.single().get("title","一体机系统3.0版本安装程序"));
+        primaryStage.setTitle(ViewUtils.single().get("title","一体机系统3.0版本安装程序"));
         primaryStage.setScene(dbinstall);
         primaryStage.setMaximized(false);
         primaryStage.setResizable(false);

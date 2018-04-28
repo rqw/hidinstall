@@ -10,7 +10,7 @@ import javafx.application.Application;
 import java.sql.Connection;
 import java.util.Map;
 
-public class DbInstallService {
+public class DbService {
     public boolean testConnection(Map<String,DbModel> model){
         model.forEach((k,v)->{
             ApplicationContext.put("connectionManager."+k,builderConnectionManager(v));

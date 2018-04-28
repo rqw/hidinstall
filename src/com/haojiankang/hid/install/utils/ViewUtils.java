@@ -1,11 +1,11 @@
 package com.haojiankang.hid.install.utils;
 
-public class ConfigUtils {
-    private static final ConfigUtils utils=new ConfigUtils();
-    public static ConfigUtils single(){
+public class ViewUtils {
+    private static final ViewUtils utils=new ViewUtils();
+    public static ViewUtils single(){
         return utils;
     }
-    private ConfigUtils(){
+    private ViewUtils(){
 
     }
     public String get(String key,String defaultValue){

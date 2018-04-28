@@ -3,19 +3,17 @@ package com.haojiankang.hid.install.controller;
 import com.haojiankang.hid.install.exception.ValidateException;
 import com.haojiankang.hid.install.model.ConnectionModel;
 import com.haojiankang.hid.install.model.DbModel;
-import com.haojiankang.hid.install.service.DbInstallService;
-import com.haojiankang.hid.install.utils.ApplicationContext;
+import com.haojiankang.hid.install.service.DbService;
 import com.haojiankang.hid.install.utils.MessageBox;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class DbInstallController {
-    private DbInstallService dbInstallService=new DbInstallService();
+public class DbController {
+    private DbService dbInstallService=new DbService();
     @FXML
     private TextField txt_ip;
     @FXML
@@ -43,7 +41,7 @@ public class DbInstallController {
     @FXML
     private TextField txt_interchg_password;
     @FXML
-    public void hadlerTestConnection(ActionEvent event){
+    public void handlerTestConnection(ActionEvent event){
         Map<String,DbModel> model=convertToModel();
         if(model!=null)
             try{

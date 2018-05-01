@@ -1,6 +1,9 @@
 package com.haojiankang.hid.install.model;
 
+import com.haojiankang.hid.install.exception.ValidateException;
+import com.haojiankang.hid.install.utils.ApplicationContext;
 import com.haojiankang.hid.install.utils.CmdUtils;
+import com.haojiankang.hid.install.utils.JdbcUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
@@ -36,6 +39,25 @@ public class ConfHandlerModel {
             return cmd;
             }
         );
+        CmdUtils.registerExecute("sql",(cmd,out)->{
+            if(cmd.getArgs().size()!=5){
+                throw new ValidateException("sql cmd args size <> 5!");
+            }
+            String user=cmd.getArgs().get(1);
+            String msg=cmd.getArgs().get(2);
+            String index=cmd.getArgs().get(0);
+            String result=cmd.getArgs().get(3);
+            String sql=cmd.getArgs().get(4);
+           JdbcUtils utils= ApplicationContext.get("jdbc."+user);
+            out.append(msg);
+            out.append("----");
+            if(result.equals(utils.getString(sql))){
+                out.append("通过\n");
+            }else{
+                out.append("未通过\n");
+            }
+           return true;
+        });
     }
     private List<HandlerCmd> cmdList;
     {
@@ -51,7 +73,7 @@ public class ConfHandlerModel {
         CmdPaser paser=null;
         if(cmdStr.startsWith("@@SQL")||!cmdStr.startsWith("@@")){
             paser=CMD_PASER.get("sql");
-            cmdStr.replace("@@SQL","");
+            cmdStr=cmdStr.replace("@@SQL","");
         }else{
             String type= StringUtils.substringBefore(cmdStr," ").replace("@","");
              paser=CMD_PASER.get(type);
@@ -74,7 +96,7 @@ public class ConfHandlerModel {
     public static String decode(String str){
         return str==null?"":str.replace("&1","$").replace("&2","@").replace("&3","&");
     }
-    static class HandlerCmd implements CmdUtils.Cmd {
+    public static class HandlerCmd implements CmdUtils.Cmd {
         private String cmd;//默认为SQL
         private List<String> args;
         {
@@ -99,7 +121,7 @@ public class ConfHandlerModel {
         }
     }
     @FunctionalInterface
-    static interface CmdPaser{
+    public static interface CmdPaser{
         HandlerCmd paser(String cmdStr);
     }
 }

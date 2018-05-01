@@ -16,7 +16,9 @@ public class JdbcUtils {
                 PreparedStatement pst=connection.prepareStatement(sql);
                 ResultSet rst=pst.executeQuery();
         ){
-            return rst.getString(1);
+            if(rst.next())
+                return rst.getString(1);
+            return null;
         }catch(Exception e){
             throw new DbException(e);
         }
@@ -26,7 +28,9 @@ public class JdbcUtils {
                 PreparedStatement pst=connection.prepareStatement(sql);
                 ResultSet rst=pst.executeQuery();
         ){
-            return rst.getInt(1);
+            if(rst.next())
+                return rst.getInt(1);
+            return null;
         }catch(Exception e){
             throw new DbException(e);
         }

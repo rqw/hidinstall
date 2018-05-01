@@ -45,7 +45,7 @@ public class DbController {
         Map<String,DbModel> model=convertToModel();
         if(model!=null)
             try{
-                dbInstallService.testConnection(model);
+                MessageBox.alert("提示信息",dbInstallService.testConnection(model));;
             }catch (ValidateException e){
                 MessageBox.alert("提示信息",e);
             }

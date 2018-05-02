@@ -10,13 +10,13 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 
 public class MessageBox {
-    public static void alert(Alert.AlertType type,String title,String header,String message,Throwable e){
-        type=type==null?Alert.AlertType.INFORMATION:type;
-        title=title==null?"":title;
-        header=header==null?"":header;
-        message=message==null?"":message;
+    public static void alert(Alert.AlertType type, String title, String header, String message, Throwable e) {
+        type = type == null ? Alert.AlertType.INFORMATION : type;
+        title = title == null ? "" : title;
+        header = header == null ? "" : header;
+        message = message == null ? "" : message;
         Alert alert = new Alert(type);
-        if(e!=null){
+        if (e != null) {
             StringWriter sw = new StringWriter();
             PrintWriter pw = new PrintWriter(sw);
             e.printStackTrace(pw);
@@ -35,32 +35,39 @@ public class MessageBox {
             expContent.add(textArea, 0, 1);
             alert.getDialogPane().setExpandableContent(expContent);
         }
-        
+
         alert.setTitle(title);
         alert.setHeaderText(header);
         alert.setContentText(message);
-       // alert.initOwner(ApplicationContext.get("stage.primary"));
+        // alert.initOwner(ApplicationContext.get("stage.primary"));
         alert.show();
 
     }
-    public static void alert(String header,Throwable e){
-        alert(Alert.AlertType.ERROR,"错误",header,e.getMessage(),e);
-    }
-    public static void alert(String header,String message){
-        alert(null,"提示信息",header,message,null);
-    }
-    public static void process(String title,String header,String message){
-        {
-            title=title==null?"":title;
-            header=header==null?"":header;
-            message=message==null?"":message;
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle(title);
-            alert.setHeaderText(header);
-            alert.setContentText(message);
-            // alert.initOwner(ApplicationContext.get("stage.primary"));
-            alert.show();
 
-        }
+    public static void alert(String header, Throwable e) {
+        alert(Alert.AlertType.ERROR, "错误", header, e.getMessage(), e);
+    }
+
+    public static void alert(String header, String message) {
+        alert(null, "提示信息", header, message, null);
+    }
+
+    public static Writer process(String title, String header, MessageWriterBuilder builder) {
+        title = title == null ? "" : title;
+        header = header == null ? "" : header;
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(header);
+        Writer mw = builder.builder(alert);
+        alert.show();
+        return mw;
+
+    }
+
+
+
+    @FunctionalInterface
+    public static interface MessageWriterBuilder {
+        Writer builder(Alert alert);
     }
 }

@@ -1,15 +1,13 @@
 package com.haojiankang.install.hid.utils;
 
-import com.haojiankang.install.hid.model.DbModel;
-import com.haojiankang.install.hid.model.UserInfoModel;
 import org.xidea.el.Expression;
 import org.xidea.el.impl.ExpressionFactoryImpl;
 
+import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 public class ApplicationContext {
-    private static Map<Object,Object> context=new ConcurrentHashMap<>();
+    private static Map<Object,Object> context=new HashMap<>();
     private static  ExpressionFactoryImpl factory= new ExpressionFactoryImpl();
 
     public static <T> T get(Object key){

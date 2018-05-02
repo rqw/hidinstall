@@ -4,11 +4,11 @@ import com.haojiankang.install.hid.exception.ValidateException;
 import com.haojiankang.install.hid.utils.ApplicationContext;
 import com.haojiankang.install.hid.utils.CmdUtils;
 import com.haojiankang.install.hid.utils.JdbcUtils;
-import javafx.application.Application;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -40,25 +40,26 @@ public class ConfHandlerModel {
             return cmd;
             }
         );
-        CmdUtils.registerExecute("sql",(cmd, out)->{
+        CmdUtils.registerExecute("sql",(cmd, wr)->{
             if(cmd.getArgs().size()!=5){
                 throw new ValidateException("sql cmd args size <> 5!");
             }
+
             String user=cmd.getArgs().get(1);
             String msg=cmd.getArgs().get(2);
             String index=cmd.getArgs().get(0);
             String result=cmd.getArgs().get(3);
             String sql=cmd.getArgs().get(4);
+            wr.writer(new HashMap<String,Object>(){{put("message","正在执行命令:"+index);}});
            JdbcUtils utils= ApplicationContext.get("jdbc."+user);
-            out.append(msg);
-            out.append("----");
             String queryResult=utils.getString(ApplicationContext.eval(sql));
             ApplicationContext.put(index,queryResult);
             if(result.equals("@")||result.equals(queryResult)){
-                out.append("通过\n");
+                wr.writer(new HashMap<String,Object>(){{put("process","通过------"+msg+"\n");}});
             }else{
-                out.append("未通过\n");
+                wr.writer(new HashMap<String,Object>(){{put("process","未通过----"+msg+"\n");}});
             }
+
            return true;
         });
     }

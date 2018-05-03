@@ -18,7 +18,7 @@ import javafx.scene.layout.Priority;
 import java.util.HashMap;
 import java.util.Map;
 
-public class DbController {
+public class ConfController {
     private DbService dbInstallService = new DbService();
     @FXML
     private TextField txt_ip;

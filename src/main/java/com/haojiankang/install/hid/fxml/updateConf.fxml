@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="383.0" prefWidth="686.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.haojiankang.install.hid.controller.ConfController">
+   <children>
+       <Label layoutX="24.0" layoutY="68.0" text="数据库IP" AnchorPane.leftAnchor="15.0" />
+       <Label layoutX="23.0" layoutY="104.0" text="端口/SID" AnchorPane.leftAnchor="15.0" />
+       <Label layoutX="24.0" layoutY="140.0" text="DBA用户" AnchorPane.leftAnchor="15.0" />
+       <Label layoutX="24.0" layoutY="178.0" text="YTG用户" AnchorPane.leftAnchor="15.0" />
+       <Label layoutX="24.0" layoutY="216.0" text="共享用户" AnchorPane.leftAnchor="15.0" />
+       <Label layoutX="24.0" layoutY="254.0" text="HID用户" AnchorPane.leftAnchor="15.0" />
+       <Label layoutX="24.0" layoutY="293.0" text="交换用户" AnchorPane.leftAnchor="15.0" />
+
+       <TextField fx:id="txt_ip" layoutX="86.0" layoutY="64.0" prefHeight="23.0" prefWidth="192.0" promptText="数据库ip地址" text="127.0.0.1" AnchorPane.leftAnchor="70.0" />
+
+      <TextField fx:id="txt_port" layoutX="86.0" layoutY="100" prefHeight="23.0" prefWidth="90.0" promptText="端口号" text="1521" AnchorPane.leftAnchor="70.0" />
+      <TextField fx:id="txt_sid" layoutX="172.0" layoutY="100" prefHeight="23.0" prefWidth="90.0" promptText="SID" text="ORCL" AnchorPane.leftAnchor="172.0" />
+
+      <TextField fx:id="txt_dba_username" layoutX="86.0" layoutY="136.0" prefHeight="23.0" prefWidth="90.0" promptText="用户名" text="system" AnchorPane.leftAnchor="70.0" />
+      <TextField fx:id="txt_dba_password" layoutX="172.0" layoutY="136.0" prefHeight="23.0" prefWidth="90.0" promptText="密码" text="123456" AnchorPane.leftAnchor="172.0" />
+
+      <TextField fx:id="txt_ytg_password" layoutX="86.0" layoutY="174.0" prefHeight="23.0" prefWidth="90.0" promptText="密码" text="ytg" AnchorPane.leftAnchor="70.0" />
+      <TextField fx:id="txt_ytg_username" layoutX="172.0" layoutY="174.0" prefHeight="23.0" prefWidth="90.0" promptText="用户名" text="ytg" AnchorPane.leftAnchor="172.0" />
+
+      <TextField fx:id="txt_yshare_password" layoutX="86.0" layoutY="212.0" prefHeight="23.0" prefWidth="90.0" promptText="密码" text="yshare" AnchorPane.leftAnchor="70.0" />
+      <TextField fx:id="txt_yshare_username" layoutX="172.0" layoutY="212.0" prefHeight="23.0" prefWidth="90.0" promptText="用户名" text="yshare" AnchorPane.leftAnchor="172.0" />
+
+      <TextField fx:id="txt_hid_username" layoutX="86.0" layoutY="250.0" prefHeight="23.0" prefWidth="90.0" promptText="用户名" text="hid" AnchorPane.leftAnchor="70.0" />
+      <TextField fx:id="txt_hid_password" layoutX="172.0" layoutY="250.0" prefHeight="23.0" prefWidth="90.0" promptText="密码" text="hid" AnchorPane.leftAnchor="172.0" />
+
+      <TextField fx:id="txt_interchg_username" layoutX="86.0" layoutY="289.0" prefHeight="23.0" prefWidth="90.0" promptText="用户名" text="interchg" AnchorPane.leftAnchor="70.0" />
+      <TextField fx:id="txt_interchg_password" layoutX="172.0" layoutY="289.0" prefHeight="23.0" prefWidth="90.0" promptText="密码" text="interchg" AnchorPane.leftAnchor="172.0" />
+
+      <Button layoutX="109.0" layoutY="328.0" mnemonicParsing="false" onAction="#handlerTestConnection" prefHeight="23.0" prefWidth="90.0" text="下一步" />
+      <Label layoutX="227.0" layoutY="21.0" text="2.5-&gt;3.0信息配置">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TabPane layoutX="288.0" layoutY="63.0" prefHeight="301.0" prefWidth="451.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="286.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="63.0">
+        <tabs>
+          <Tab text="说明">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea editable="false" prefHeight="394.0" prefWidth="563.0" text="配置信息填写说明:&#10;1.DBA用户填写任意具有DBA角色的数据库用户帐号密码。&#10;2.YTG用户需要填写原一体机的用户名密码。&#10;3.共享用户需要填写原共享库的用户名密码。&#10;4.HID用户填写新版一体机库的用户名密码。&#10;5.交换用户填写新版交换库的用户名密码。&#10;6.HID用户和交换用户建议使用默认值。&#10;7.信息填写完毕后点击下一步检配置信息是否正确" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextArea>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="检查">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutX="26.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="C1" />
+                            <TableColumn prefWidth="75.0" text="C2" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
